@@ -7,10 +7,15 @@ option go_package = "github.com/deepak2107/grpc-go-project/calculator/proto";
 import "sum.proto"; // assuming it's in the same directory
 import "primes.proto";
 import "average.proto";
+import "max.proto";
+import "sqrt.proto";
 
 service CalculatorService {
   rpc Sum(SumRequest) returns (SumResponse);
   rpc Primes(PrimeRequest) returns (stream PrimeResponse);
   rpc Average(stream AverageRequest) returns (AverageResponse);
+  rpc Max(stream MaxRequest) returns (stream MaxResponse);
+  rpc Sqrt(SqrtRequest) returns (SqrtResponse);
 }
+
 
